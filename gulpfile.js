@@ -5,7 +5,7 @@ const webpack = require("webpack-stream");
 const browsersync = require("browser-sync");
 
 const dist = "./dist/";
-// const dist = "/Applications/MAMP/htdocs/test"; // Ссылка на вашу папку на сервере
+// const dist = '../программы/open_server_5_3_5_basic_premium_ultimate/ospanel/domains/dist';
 
 gulp.task("copy-html", () => {
     return gulp.src("./src/*.html")
