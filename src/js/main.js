@@ -4,6 +4,8 @@ import MiniSlider from './modules/slider/slider-mini';
 import Differense from './modules/difference';
 import Form from './modules/form';
 import Input from './modules/detectInput';
+import Accordeon from './modules/accordeon';
+import Download from './modules/download';
 
 window.addEventListener('DOMContentLoaded', () => {
 	const slider = new MainSlider({btn: '.next', page: '.page'});
@@ -56,5 +58,9 @@ window.addEventListener('DOMContentLoaded', () => {
 	form.postData()
 
 	new Input('[type="email"]').checkInput()
+
+	new Accordeon('.plus').render();
+
+	new Download('.download').bindTrigger()
 
 })

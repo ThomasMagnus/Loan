@@ -60,9 +60,11 @@ export default class MainSlider extends Slider {
 				})
 	
 				item.parentNode.previousElementSibling.addEventListener('click', (e) => {
-					e.preventDefault()
-					this.slideIndex = 1;
-					this.showSlide(this.slideIndex - 1)
+					if (!e.target.classList.contains('download')) {
+						e.preventDefault()
+						this.slideIndex = 1;
+						this.showSlide(this.slideIndex - 1)
+					}
 				})
 			})
 		} catch(e) {}
